@@ -1,0 +1,208 @@
+body {
+    background: linear-gradient(270deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.85)),
+        linear-gradient(270deg,
+            red, orange, yellow, green, blue, indigo, violet);
+    background-size: 1400% 1400%;
+    animation: rainbow 20s ease infinite;
+    color: white;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header,
+footer {
+    width: 500px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #0ff;
+}
+
+/* Form untuk Card */
+.form-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0;
+}
+
+/* label inputan */
+.form-label {
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* Input untuk Form */
+.form-control {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #0ff;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #ff0;
+    box-shadow: 0 0 10px #ff0;
+    color: #fff;
+}
+
+/* tombol Neon */
+.btn-neon {
+    background-color: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 5px #0ff, 0 0 20px #0ff;
+    border-radius: 8px;
+}
+
+.btn-neon:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+/* Loading */
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #0ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0ff;
+}
+
+/* Popup */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.popup-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #0ff, 0 0 30px #0ff;
+}
+
+.popup-box h3 {
+    color: #0ff;
+    margin-bottom: 15px;
+}
+
+.popup-box button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #0ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.popup-box button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Samain semua input text/number */
+input[type="text"].form-control,
+input[type="number"].form-control {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #0ff;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* glow saat fokus ngetik di inputan */
+input[type="text"].form-control:focus,
+input[type="number"].form-control:focus {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #ff0;
+    box-shadow: 0 0 10px #ff0;
+    color: #fff;
+}
+
+/* mengilangkan spinner default di input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type=number] {
+    appearance: textfield;       
+    -moz-appearance: textfield;  
+}
